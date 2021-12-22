@@ -25,6 +25,7 @@ a.navbar-brand {
   max-width: fit-content;
   font-family: "Nanum Gothic", sans-serif;
   font-size: 30px;
+  margin-left: 0px;
 }
 
 button.loginButton {

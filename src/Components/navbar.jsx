@@ -12,7 +12,13 @@ const Navgbar = () => {
     <Navbar bg="light" expand="lg">
       <Container>
         <FontAwesomeIcon icon={solid("bars")} />
-        <NavDropdown label="Menu"></NavDropdown>
+        <Nav className="me-auto">
+          <NavDropdown title="MENU" id="basic-nav-dropdown">
+            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.2">About</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.3">Authors</NavDropdown.Item>
+          </NavDropdown>
+        </Nav>
 
         <Navbar.Brand href="#home">articoool.</Navbar.Brand>
         <Button className="loginButton">REGISTER/LOG IN</Button>

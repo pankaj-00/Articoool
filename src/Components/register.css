@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,400;1,500;1,600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&display=swap");
+
+
+
+.RegisterSection{
+    margin-top: 140px;
+    margin-bottom: 400px;
+}
+.RegisterSection2{
+    display: flex;
+    position: relative;
+    width: 40%;
+    
+    
+    flex-direction: column;
+    flex-grow: 2;
+    justify-content: center;
+    margin: auto;
+    vertical-align: middle;
+    
+}
+
+.EmailAddress{
+
+    font-family: "Nanum Gothic", sans-serif;
+}
+
+.Password{
+    font-family: "Nanum Gothic", sans-serif;
+}
+
+.SubmitContainer{
+
+    display: flex;
+    align-items: center;
+    
+
+}
+Button.SubmitButton {
+
+    width: 375px;
+    margin: auto;
+    font-family: "Nanum Gothic", sans-serif;
+    border-radius: 20px;
+    background-color: azure;
+    
+    
+}
+Button.SubmitButton:hover,
+Button.loginButton:focus{
+    background-color: teal;
+}
+
+.LoginButton{
+    margin-left: 320px;
+}
+
+.SignUpButton{
+    
+    
+    color: teal;
+    border: none;
+    background: noRegister
+}

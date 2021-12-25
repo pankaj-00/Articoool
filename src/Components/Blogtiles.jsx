@@ -9,9 +9,11 @@ const Blogtiles = () => {
         <Blogtile/>
         <Blogtile/>
         <Blogtile/>
-        <Blogtile/>
-        <Blogtile/>
-        <Blogtile/>
+        <div className="blogTiles2">
+            <Blogtile/>
+            <Blogtile/>
+            <Blogtile/>
+        </div>
 
     </div>   
        

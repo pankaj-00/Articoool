@@ -3,17 +3,25 @@
 
 
 .blogTile{
+    
     width: 400px;
-    margin: 50px 25px 40px 25px;
-    margin-right: 81px;
-    cursor: pointer; 
+    
+    margin: auto 75px;
+   
+    cursor: pointer;
+    
+
+    
+    
 }
 
 .blogImg{
+    
+    position: relative;
     width: 100%;
     height: 250px;
-    margin-left: 20px;
-   
+    
+    object-fit: cover;
     border-radius: 5%;
 }
 
@@ -25,14 +33,15 @@
     font-style: italic;
     font-weight: 700;
     margin-top: 10px;
-    margin-left: 165px;
+    
+    
     
 }
 
 .blogTime{
     
     color: silver;
-    margin-left: 175px;
+    vertical-align: middle;
 }
 
 .blogDescription{
@@ -44,13 +53,13 @@
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-    margin-left: 55px;
+    
     margin-top: 10px;
  
 
 }
 
-.lineSpace{
-    margin-left: 45px;
-}
 
+.blogTile:hover{
+    color: grey;
+}

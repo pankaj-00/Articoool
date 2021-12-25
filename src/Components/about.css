@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Playfair+Display:ital,wght@0,500;1,400;1,500;1,600&display=swap');
+
+
+
+.aboutMeSection{
+
+    margin-bottom: 700px;
+}
+
+
+.aboutMeTitle{
+  margin: auto;
+  margin-top: 30px; 
+  position: relative;
+  right: 20px;
+  width: 50%;
+  border: 5px solid teal;
+  padding: 10px;
+  text-align: center;
+  
+  font-size: 40px;
+  font-family: 'Playfair Display', serif;
+  
+}
+
+.aboutMeDescription{
+    margin: auto;
+    margin-top: 20px;
+    margin-left: 70px;
+    margin-right: 70px;
+    font-size: 25px;
+}

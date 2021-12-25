@@ -1,22 +1,19 @@
 import React from "react";
 import Blogtile from "./Blogtile";
-import "./blogtiles.css"
+import "./blogtiles.css";
 
 const Blogtiles = () => {
-    return ( 
-
+  return (
     <div className="blogTiles">
-        <Blogtile/>
-        <Blogtile/>
-        <Blogtile/>
-        <Blogtile/>
-        <Blogtile/>
-        <Blogtile/>
+      <Blogtile />
+      <Blogtile />
+      <Blogtile />
 
-    </div>   
-       
-    );
+      <Blogtile />
+      <Blogtile />
+      <Blogtile />
+    </div>
+  );
 };
- 
-export default Blogtiles;
 
+export default Blogtiles;

@@ -2,7 +2,7 @@ import React from "react";
 
 const Copyright = () => {
   return (
-    <div className="CopyrightContainer">
+    <div className="fixed-bottom CopyrightContainer">
       Copyright © LuciferDanceAcademy.com | All Rights Reserved
     </div>
   );

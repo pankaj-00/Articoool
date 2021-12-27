@@ -2,4 +2,15 @@
   flex: 9;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.blogTiles2 {
+  flex: 9;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }

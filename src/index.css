@@ -15,15 +15,15 @@ code {
     monospace;
 }
 
-div.containerM {
-  min-height: 100vh;
+/* div.containerM {
   display: flex;
   flex-direction: column;
-}
+  height: 100%;
+} */
 
 div.container {
   max-width: inherit;
-  background-color: #f5f5f5;
+  background-color: azure;
 }
 
 a.navbar-brand {
@@ -34,26 +34,15 @@ a.navbar-brand {
   margin-left: 0px;
 }
 
-button.loginButton {
-  border: none;
-  font-family: cursive;
-  background: transparent;
-  color: black;
-  padding: 14px;
-  font-family: "Signika", sans-serif;
-  font-size: 19px;
-}
-
 button.loginButton:hover,
-button.loginButton:focus {
+button.loginButton:active {
   background-color: teal;
-  border-radius: 20px;
+  border-radius: 5%;
 }
 
 div.CopyrightContainer {
   background-color: black;
   color: white;
   text-align: center;
-
   width: 100%;
 }

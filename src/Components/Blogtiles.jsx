@@ -9,11 +9,11 @@ const Blogtiles = () => {
         <Blogtile/>
         <Blogtile/>
         <Blogtile/>
-        <div className="blogTiles2">
-            <Blogtile/>
-            <Blogtile/>
-            <Blogtile/>
-        </div>
+    
+        <Blogtile/>
+        <Blogtile/>
+        <Blogtile/>
+    
 
     </div>   
        

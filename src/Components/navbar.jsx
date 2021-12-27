@@ -16,8 +16,8 @@ const Navgbar = () => {
   
   const user=false;
   return (
-    <Navbar bg="light" expand="lg">
-      <Container>
+    <Navbar className="NavBar" bg="light" expand="lg">
+      <Container >
         <FontAwesomeIcon icon={solid("bars")} />
         <Nav className="me-auto">
           <NavDropdown title="MENU" id="basic-nav-dropdown">

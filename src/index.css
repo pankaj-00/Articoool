@@ -33,23 +33,11 @@ a.navbar-brand {
   max-width: fit-content;
   font-family: "Nanum Gothic", sans-serif;
   font-size: 30px;
-  margin-left: 0px;
-}
-
-button.loginButton {
-  border: none;
-  font-family: cursive;
-  background: transparent;
-  color: black;
-  padding: 14px;
-  font-family: "Signika", sans-serif;
-  font-size: 19px;
-  
+  margin-left: 120px;
 }
 
 button.loginButton:hover,
-button.loginButton:active{
-  
+button.loginButton:active {
   background-color: teal;
   border-radius: 5%;
 }
@@ -58,7 +46,5 @@ div.CopyrightContainer {
   background-color: black;
   color: white;
   text-align: center;
-  position: absolute;
-  margin-bottom: 0px;
   width: 100%;
 }

@@ -1,45 +1,44 @@
 import "./App.css";
 import Copyright from "./Components/copyright";
 import Navbar from "./Components/navbar";
-import Blogtiles from './Components/Blogtiles';
+
+import Blogtiles from "./Components/Blogtilesedit";
 import About from "./Components/About";
-import Register from "./Components/Register"
-import Login from './Components/Login';
+import Register from "./Components/Register";
+import Login from "./Components/Login";
 import {
   BrowserRouter as Router,
   Route,
-  Routes as Switch
+  Routes as Switch,
 } from "react-router-dom";
-
-
+import { AuthProvider } from "./contexts/AuthContext";
 
 function App() {
-  
-  const user=false;
+  const user = false;
   return (
-    <Router>
-    
-      <Navbar />
-      <Switch>
-        <Route path="/" element={<Blogtiles/>} />
-      </Switch>
-
-      <Switch>
-        <Route path="/Login" element={<Login/>}/>
-      </Switch>  
-
-      <Switch>
-        <Route path="/Register" element={<Register/>}/>
-      </Switch> 
+    <AuthProvider>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/" element={<Blogtiles />} />
         
-      <Switch>
-        <Route path="/About" element={<About/>}/>
-      </Switch>
+
         
-    <Copyright />
-      
-    
-    </Router>
+          <Route path="/Login" element={<Login />} />
+        
+
+        
+          <Route path="/Register" element={<Register />} />
+        
+
+        
+          <Route path="/About" element={<About />} />
+          
+        </Switch>
+
+        <Copyright />
+      </Router>
+    </AuthProvider>
   );
 }
 

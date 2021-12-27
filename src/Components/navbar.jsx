@@ -8,13 +8,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { Link } from "react-router-dom";
 
-
-
-
-
 const Navgbar = () => {
-  
-  const user=false;
+  const user = false;
   return (
     <Navbar className="NavBar" bg="light" expand="lg">
       <Container >
@@ -28,10 +23,13 @@ const Navgbar = () => {
         </Nav>
 
         <Navbar.Brand href="/">articoool.</Navbar.Brand>
-        <Link to="/Login" className='Link'>
-          <button className="loginButton" id="myBtn" onclick="getElementById('myBtn').style.display = 'block'; this.style.display = 'none'">
-            REGISTER/LOGIN
-          </button>
+        <Link to="/Login" className="Link">
+          <Button
+            variant="outline-info"
+            style={{ color: "black", fontSize: "17px", fontWeight: "bold" }}
+          >
+            REGISTER / LOG IN
+          </Button>
         </Link>
       </Container>
     </Navbar>

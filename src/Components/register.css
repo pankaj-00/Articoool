@@ -34,12 +34,15 @@
 
     display: flex;
     align-items: center;
+    justify-content: center;
     
 
 }
 Button.SubmitButton {
 
+
     width: 375px;
+    
     margin: auto;
     font-family: "Nanum Gothic", sans-serif;
     border-radius: 20px;

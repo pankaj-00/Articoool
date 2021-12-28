@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Form } from "react-bootstrap";
 import { Button, Alert } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./register.css";
 
@@ -15,18 +15,19 @@ const Register = () => {
   const { signup } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const history = useNavigate();
 
   const handleSubmit = async (e) => {
-    console.log("Handling Form Submission");
     e.preventDefault();
     try {
       setError("");
       setLoading(true);
       await signup(emailRef.current.value, pwdRef.current.value);
+      history("/Login");
     } catch {
       setError("Failed to create an account");
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   return (

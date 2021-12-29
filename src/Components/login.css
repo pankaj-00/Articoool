@@ -1,79 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,400;1,500;1,600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,400;1,500;1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&display=swap");
 
-
-
-.LoginSection{
-    margin-top: 200px;
-    margin-bottom: 400px;
+.LoginSection {
+  margin-top: 200px;
+  margin-bottom: 400px;
 }
-.LoginSection2{
-    display: flex;
-    position: relative;
-    width: 40%;
-    flex-direction: column;
-    flex-grow: 2;
-    justify-content: center;
-    margin: auto;
-    vertical-align: middle;
-    
+.LoginSection2 {
+  display: flex;
+  position: relative;
+  width: 40%;
+  flex-direction: column;
+  flex-grow: 2;
+  justify-content: center;
+  margin: auto;
+  vertical-align: middle;
 }
 
-.EmailAddress{
-    
-    font-family: "Nanum Gothic", sans-serif;
+.EmailAddress {
+  font-family: "Nanum Gothic", sans-serif;
 }
 
-
-
-.Password{
-    font-family: "Nanum Gothic", sans-serif;
+.Password {
+  font-family: "Nanum Gothic", sans-serif;
 }
 
 Button.SubmitButton {
+  margin: auto;
+  width: 375px;
 
-    
-    margin: auto;
-    width: 375px;
-    
-    font-family: "Nanum Gothic", sans-serif;
-    border-radius: 20px;
-    background-color: azure;
-    
-    
+  font-family: "Nanum Gothic", sans-serif;
+  border-radius: 20px;
+  background-color: azure;
 }
 
-.SubmitContainer{
-
-    display: flex;
-    align-items: center;
-    
-
+.SubmitContainer {
+  display: flex;
+  align-items: center;
 }
 Button.SubmitButton:hover,
-Button.loginButton:focus{
-    background-color: teal;
+Button.loginButton:focus {
+  background-color: teal;
 }
 
-.SignUpButton{
-    
-    display: flex;
-    margin: auto;
-    margin-top: 5px;
-    color: teal;
-    border: none;
-    background: none;
+.SignUpButton {
+  display: flex;
+  margin: auto;
+  margin-top: 5px;
+  color: teal;
+  border: none;
+  background: none;
 }
 
+Button.GoogleSignIn {
+  margin-bottom: 20px;
+  border-radius: 20px;
+  color: black;
+  background-color: white;
+  border: 1px solid #dadce0;
+  font-family: "Nanum Gothic", sans-serif;
+}
 
+Button.GoogleSignIn:hover,
+Button.GoogleSignIn:focus {
+  border: 2px solid #dadce0;
+  background-color: #cde7cd;
+  color: black;
+}
 
+div.google {
+  outline: none;
+}
 
-.ForgotPassword{
-    
-    display: flex;
-    float: inline-start;
-    width: 135px;
-    border: none;
-    background: none;
-    color: teal;
+.ForgotPassword {
+  display: flex;
+  float: inline-start;
+  width: 135px;
+  border: none;
+  background: none;
+  color: teal;
 }

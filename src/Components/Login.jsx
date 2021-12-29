@@ -4,11 +4,12 @@ import { Button, Alert } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
 import { useAuth } from "./../contexts/AuthContext";
+import GoogleIcon from "./googleIcon";
 
 const Login = () => {
   const emailRef = useRef();
   const pwdRef = useRef();
-  const { login } = useAuth();
+  const { login, googleSignIn } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const history = useNavigate();
@@ -26,6 +27,19 @@ const Login = () => {
     }
   };
 
+  const handleGoogleLogin = async () => {
+    try {
+      setLoading(true);
+      const result = await googleSignIn();
+      console.log(result.user.email, "Logged in successfully");
+
+      history("/");
+    } catch {
+      setError("Failed to sign in");
+      setLoading(false);
+    }
+  };
+
   return (
     <>
       {error ? (
@@ -33,8 +47,14 @@ const Login = () => {
           <strong>{error}</strong>
         </Alert>
       ) : null}
+
       <div className="LoginSection">
         <Form className="LoginSection2" onSubmit={handleSubmit}>
+          <Button className="GoogleSignIn" onClick={handleGoogleLogin}>
+            <GoogleIcon />
+            Sign In With Google
+          </Button>
+
           <div className="EmailSignupRegister">
             <Form.Group
               className="mb-3 EmailAddress"

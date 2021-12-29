@@ -1,4 +1,95 @@
-.myfile{
-    background-color: azure ;
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&display=swap");
+
+
+.WritePage{
+    /* background-image: url("https://www.pngmagic.com/product_images/blue-plain-background-images.jpg"); */
+    display: flex;
+    flex-direction: column ;
+    width: auto;
+    margin: auto;
+    font-size: 20px;
+    padding: 200px;
+    font-family: "Nanum Gothic", sans-serif;
     
+}
+
+
+.myfile{
+    display: none ;
+    
+}
+
+.PlusIcon{
+    color: teal;
+    padding-right: 5px;
+   cursor: pointer;
+    
+}
+
+
+.Title{
+    margin-top:1%;
+}
+
+:placeholder-shown{
+    color: teal;
+}
+
+.myTitle{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid;
+    background-color: azure;
+    padding: 12px 20px;
+}
+
+.myTitle:focus{
+    outline: none;
+}
+
+
+
+.SelectImg{
+    
+    font-family: "Nanum Gothic", sans-serif;
+}
+
+.ToolBar{
+    display: flex;
+    flex-direction: column;
+    
+    text-align: center;
+}
+
+.TextBox1{
+  width: 100%;
+  height:600px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: azure;
+  resize: none;
+  border: none;
+}
+
+.Editor:placeholder-shown{
+    color: teal;
+}
+
+.PublishButton{
+    
+    
+    width: 20%;
+    margin-top: 1em;
+    overflow: hidden;
+    
+    
+}
+
+.PublishButtonContainer{
+    display: flex;
+    justify-content: right;
+    margin-right: 1em;
 }

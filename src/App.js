@@ -12,7 +12,7 @@ import {
   Routes as Switch,
 } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
-import WritePage from "./Components/WritePage";
+import WritePage from "./Components/WritePage2";
 
 function App() {
   return (

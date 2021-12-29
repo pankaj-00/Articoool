@@ -65,10 +65,7 @@ Button.GoogleSignIn:focus {
   border: 2px solid #dadce0;
   background-color: #cde7cd;
   color: black;
-}
-
-div.google {
-  outline: none;
+  box-shadow: none !important;
 }
 
 .ForgotPassword {

@@ -1,34 +1,31 @@
-
-
-import { Editor } from "react-draft-wysiwyg";
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-
-import "./WritePage.css"
-import { EditorState } from 'draft-js';
-
-import React, { Component } from 'react'
-import "./WritePage.css"
+import { Editor, EditorState } from "draft-js";
+import "draft-js/dist/Draft.css";
+import React from 'react'
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import "./WritePage.css"
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+  
 
-export default class WritePage2 extends Component {
-    
-    state={
-       editorState: EditorState.createEmpty(),
+
+export default function WritePage() {
+      
+    const [editorState, setEditorState] = React.useState(
+        () => EditorState.createEmpty()
+    );
+
+    const editor = React.useRef(null);
+    function focusEditor() {
+    editor.current.focus();
     }
+
     
-    onEditorStateChange =(editorState) =>{
-        this.setState({
-            editorState
-        });
-    };
 
-    render() {
-
-        const {editorState}= this.state;
-
-        return (
-        <div className='Write'>
+    
+    
+    return (
+          <div>
+            <div className='Write'>
            <div className="WritePage">
             <label className='SelectImg' style={{color:"Teal"}} ><i className="PlusIcon fas fa-plus"> </i>
             Select an Image
@@ -39,15 +36,16 @@ export default class WritePage2 extends Component {
                 <input type="text" className='myTitle' placeholder='Your Title'/>
             </label>
 
-            <label className='TextBox1' >
+            <label className='TextBox1' style={{cursor: "text" }} onClick={focusEditor} >
                 <Editor
-                    editorState={editorState}
+                    
                     toolbarClassName="toolbarClassName"
                     wrapperClassName="wrapperClassName"
                     editorClassName="editorClassName"
-                    onEditorStateChange={this.onEditorStateChange}
-                    placeholder='Write here....'
-                    className="Editor"
+                    ref={editor}
+                    editorState={editorState}
+                    onChange={setEditorState}
+                    placeholder="Write something!"
                 />
             </label>
             <Link to="/" className='Link'>
@@ -62,6 +60,7 @@ export default class WritePage2 extends Component {
           </div> 
           
         </div>
-        )
-    }
-}
+          </div>
+      )
+  }
+  

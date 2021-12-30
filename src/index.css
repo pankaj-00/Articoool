@@ -24,7 +24,7 @@ code {
 div.container {
   display: flex;
   flex-wrap: nowrap;
-
+  height: 75px;
   max-width: inherit;
   background-color: azure;
 }
@@ -47,5 +47,7 @@ div.CopyrightContainer {
   background-color: black;
   color: white;
   text-align: center;
+  
   width: 100%;
+  height: 100px;
 }

@@ -30,8 +30,7 @@ const Login = () => {
   const handleGoogleLogin = async () => {
     try {
       setLoading(true);
-      const result = await googleSignIn();
-      console.log(result.user.email, "Logged in successfully");
+      await googleSignIn();
 
       history("/");
     } catch {

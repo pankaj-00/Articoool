@@ -1,52 +1,57 @@
-import { Editor, EditorState } from "draft-js";
-import "draft-js/dist/Draft.css";
-import React from 'react'
+import React, { useState } from "react";
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+import "./WritePage.css";
+import { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import "./WritePage.css"
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-  
 
 
-export default function WritePage() {
-      
-    const [editorState, setEditorState] = React.useState(
-        () => EditorState.createEmpty()
-    );
 
-    const editor = React.useRef(null);
-    function focusEditor() {
-    editor.current.focus();
+class MyComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: "",
     }
+  }
 
-    
+  modules = {
+    toolbar: [
+      [{ 'header': [1, 2, false] }],
+      ['bold', 'italic', 'underline','strike', 'blockquote'],
+      [{'list': 'ordered'}, {'list': 'bullet'}, {'indent': '-1'}, {'indent': '+1'}],
+      ['link', 'image'],
+      ['clean']
+    ],
+  }
 
-    
-    
+  formats = [
+    'header',
+    'bold', 'italic', 'underline', 'strike', 'blockquote',
+    'list', 'bullet', 'indent',
+    'link', 'image'
+  ]
+
+  render() {
     return (
-          <div>
-            <div className='Write'>
+    
+        <div className='Write'>
            <div className="WritePage">
-            <label className='SelectImg' style={{color:"Teal"}} ><i className="PlusIcon fas fa-plus"> </i>
+            {/* <label className='SelectImg' style={{color:"Teal"}} ><i className="PlusIcon fas fa-plus"> </i>
             Select an Image
             <input type="file" id="myfile" className="myfile" accept=".png, .jpeg, .jpg"/>
-            </label>    
+            </label>     */}
             
             <label className='Title'>
                 <input type="text" className='myTitle' placeholder='Your Title'/>
             </label>
 
-            <label className='TextBox1' style={{cursor: "text" }} onClick={focusEditor} >
-                <Editor
-                    
-                    toolbarClassName="toolbarClassName"
-                    wrapperClassName="wrapperClassName"
-                    editorClassName="editorClassName"
-                    ref={editor}
-                    editorState={editorState}
-                    onChange={setEditorState}
-                    placeholder="Write something!"
-                />
+            <label className='TextBox1' >
+               <ReactQuill className="ReactQuill" theme="snow"
+                    modules={this.modules}
+                    formats={this.formats}>
+                </ReactQuill> 
             </label>
             <Link to="/" className='Link'>
             <div className='PublishButtonContainer'>
@@ -60,7 +65,9 @@ export default function WritePage() {
           </div> 
           
         </div>
-          </div>
-      )
+        
+    );
   }
-  
+}
+
+export default MyComponent;

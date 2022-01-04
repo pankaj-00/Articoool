@@ -1,7 +1,7 @@
 import "./App.css";
 import Copyright from "./Components/copyright";
 import Navbar from "./Components/navbar";
-
+import ContactUs from './Components/ContactUs';
 import Blogtiles from "./Components/Blogtilesedit";
 import About from "./Components/About";
 import Register from "./Components/Register";
@@ -15,6 +15,7 @@ import {
 
 import { AuthProvider } from "./contexts/AuthContext";
 import WritePage from "./Components/WritePage";
+
 
 function App() {
   return (
@@ -38,7 +39,7 @@ function App() {
             }
           />
         </Switch>
-
+        <ContactUs/>  
         <Copyright />
       </Router>
     </AuthProvider>

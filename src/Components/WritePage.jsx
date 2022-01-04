@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 
 
-class MyComponent extends Component {
+class WritePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -50,7 +50,9 @@ class MyComponent extends Component {
             <label className='TextBox1' >
                <ReactQuill className="ReactQuill" theme="snow"
                     modules={this.modules}
-                    formats={this.formats}>
+                    formats={this.formats}
+                    placeholder="Write here....">
+                    
                 </ReactQuill> 
             </label>
             <Link to="/" className='Link'>
@@ -70,4 +72,4 @@ class MyComponent extends Component {
   }
 }
 
-export default MyComponent;
+export default WritePage;

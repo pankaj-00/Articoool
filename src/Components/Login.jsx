@@ -9,7 +9,7 @@ import GoogleIcon from "./googleIcon";
 const Login = () => {
   const emailRef = useRef();
   const pwdRef = useRef();
-  const { login, googleSignIn } = useAuth();
+  const { login, googleSignIn, currentUser } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const history = useNavigate();

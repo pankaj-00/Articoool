@@ -3,7 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import React from "react";
-import { Button, Badge } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { Link } from "react-router-dom";
@@ -29,8 +29,16 @@ const Navgbar = () => {
         <Navbar.Brand href="/">articoool.</Navbar.Brand>
         {currentUser ? (
           <>
-            <Badge bg="secondary">{currentUser.displayName}</Badge>
-            <Button variant="secondary" onClick={handleLogout}>
+            <img
+              src={currentUser.photoURL}
+              alt={currentUser.displayName}
+              className="rounded-circle m-3 h-75"
+            />
+            <Button
+              variant="outline-info"
+              style={{ color: "black", fontSize: "17px", fontWeight: "bold" }}
+              onClick={handleLogout}
+            >
               Log Out
             </Button>
           </>

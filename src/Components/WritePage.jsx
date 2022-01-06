@@ -10,10 +10,6 @@ import { collection, addDoc, getDoc } from "firebase/firestore";
 
 import { getAuth } from "firebase/auth";
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 304a20c109cef14ccdc8763c3092ee8d6695cdd3
 class WritePage extends Component {
   constructor(props) {
     super(props);
@@ -83,7 +79,6 @@ class WritePage extends Component {
             <input type="file" id="myfile" className="myfile" accept=".png, .jpeg, .jpg"/>
             </label>     */}
 
-<<<<<<< HEAD
           <label className="Title">
             <input
               type="text"
@@ -130,20 +125,6 @@ class WritePage extends Component {
                 variant="outline-info"
                 onClick={handlePublish}
               >
-=======
-            <label className='TextBox1' >
-               <ReactQuill className="ReactQuill" theme="snow"
-                    modules={this.modules}
-                    formats={this.formats}
-                    placeholder="Write here....">
-                    
-                </ReactQuill> 
-            </label>
-            <Link to="/" className='Link'>
-            <div className='PublishButtonContainer'>
-            
-            <Button className="PublishButton" variant="outline-info">
->>>>>>> 304a20c109cef14ccdc8763c3092ee8d6695cdd3
                 Publish
               </Button>
             </div>
@@ -154,8 +135,4 @@ class WritePage extends Component {
   }
 }
 
-<<<<<<< HEAD
 export default WritePage;
-=======
-export default WritePage;
->>>>>>> 304a20c109cef14ccdc8763c3092ee8d6695cdd3

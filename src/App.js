@@ -1,7 +1,7 @@
 import "./App.css";
 import Copyright from "./Components/copyright";
 import Navbar from "./Components/navbar";
-import ContactUs from './Components/ContactUs';
+import ContactUs from "./Components/ContactUs";
 import Blogtiles from "./Components/Blogtilesedit";
 import About from "./Components/About";
 import Register from "./Components/Register";
@@ -16,7 +16,6 @@ import {
 import { AuthProvider } from "./contexts/AuthContext";
 import WritePage from "./Components/WritePage";
 import SinglePost from './Components/SinglePost';
-
 
 function App() {
   return (
@@ -41,7 +40,7 @@ function App() {
           />
           <Route path="/Post" element={<SinglePost/>}/>
         </Switch>
-        <ContactUs/>  
+        <ContactUs />
         <Copyright />
       </Router>
     </AuthProvider>

@@ -20,29 +20,29 @@ export default function contactUs() {
                  
             </div>
 
-            <div className='FollowUsConatainer'>
+            <div className='FollowUsContainer'>
                 <div className='FollowUs'>
                 Follow Us
                 </div>
                 <div className='Socials'>
                     <div className='EmailId'>
-                    <span className="fas fa-envelope fa"></span>
-                    <span className="text"> Mail</span>
+                    <span className="Emaillogo fas fa-envelope fa"></span>
+                    <span className="Emailtext"> Mail</span>
                     </div>
 
                     <div className='Instagram'>
-                    <span className="fab fa-instagram"></span>
-                    <span className="text"> Instagram</span>
+                    <span className="Instagramlogo fab fa-instagram"></span>
+                    <span className="Instagramtext"> Instagram</span>
                     </div>
 
                     <div className='Twitter'>
-                    <span className="fab fa-twitter"></span>
-                    <span className="text"> Twitter</span>
+                    <span className="Twitterlogo fab fa-twitter"></span>
+                    <span className="Twittertext"> Twitter</span>
                     </div>
 
                     <div className='Facebook'>
-                    <span className="fab fa-facebook"></span>
-                    <span className="text"> Facebook </span>
+                    <span className="Facebooklogo fab fa-facebook"></span>
+                    <span className="Facebooktext"> Facebook </span>
                     </div>
                 </div>
             </div>

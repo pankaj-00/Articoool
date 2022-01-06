@@ -6,7 +6,10 @@ import "./blogtiles.css";
 const Blogtiles = () => {
   return (
     <div className="blogTiles">
+      
+      
       <Blogtile />
+      
       <Blogtile />
       <Blogtile />
       <Blogtile />

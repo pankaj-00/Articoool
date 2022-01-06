@@ -15,6 +15,7 @@ import {
 
 import { AuthProvider } from "./contexts/AuthContext";
 import WritePage from "./Components/WritePage";
+import SinglePost from './Components/SinglePost';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
               </PrivateRoute>
             }
           />
+          <Route path="/Post" element={<SinglePost/>}/>
         </Switch>
         <ContactUs/>  
         <Copyright />

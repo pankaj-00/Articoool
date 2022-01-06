@@ -1,6 +1,7 @@
 import React from "react";
 import "./blogtilesedit.css";
 
+
 const Blogtilesedit = () => {
   return (
     <div className="grid-container">
@@ -186,7 +187,10 @@ const Blogtilesedit = () => {
         </p>
       </div>
       
+      
     </div>
+    
+    
   );
 };
 

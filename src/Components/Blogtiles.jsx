@@ -6,6 +6,7 @@ import { Button } from "react-bootstrap";
 import "./blogtiles.css";
 import parse from "html-react-parser";
 
+
 const Blogtiles = () => {
   const [posts, setposts] = useState([]);
   const [dataIn, setDataIn] = useState(false);
@@ -30,7 +31,11 @@ const Blogtiles = () => {
       <Blogtile />
       <Blogtile />
       <Blogtile />
+<<<<<<< HEAD
       <button onClick={getData}>Set Posts</button>
+=======
+      
+>>>>>>> 304a20c109cef14ccdc8763c3092ee8d6695cdd3
     </div>
   );
 };

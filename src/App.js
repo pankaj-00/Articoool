@@ -1,8 +1,8 @@
 import "./App.css";
 import Copyright from "./Components/copyright";
 import Navbar from "./Components/navbar";
-
-import Blogtiles from "./Components/Blogtiles";
+import ContactUs from "./Components/ContactUs";
+import Blogtiles from "./Components/Blogtilesedit";
 import About from "./Components/About";
 import Register from "./Components/Register";
 import Login from "./Components/Login";
@@ -38,7 +38,7 @@ function App() {
             }
           />
         </Switch>
-
+        <ContactUs />
         <Copyright />
       </Router>
     </AuthProvider>

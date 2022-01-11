@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { Link } from "react-router-dom";
 import { useAuth } from "./../contexts/AuthContext";
-
+import logo from "./Phymii_logo_3.png"
 const Navgbar = () => {
   const { currentUser, logOut } = useAuth();
   const handleLogout = async () => {
@@ -21,12 +21,13 @@ const Navgbar = () => {
         <Nav className="me-auto">
           <NavDropdown title="MENU" id="basic-nav-dropdown">
             <NavDropdown.Item href="/Action">Action</NavDropdown.Item>
-            <NavDropdown.Item href="/About">About</NavDropdown.Item>
+            <NavDropdown.Item className="uppercase" href="/About">About</NavDropdown.Item>
             <NavDropdown.Item href="/Authors">Authors</NavDropdown.Item>
           </NavDropdown>
         </Nav>
-
-        <Navbar.Brand href="/">articoool.</Navbar.Brand>
+        <div className="LogoContainer">
+          Phymii
+        </div>
         {currentUser ? (
           <>
             <img
@@ -45,10 +46,10 @@ const Navgbar = () => {
         ) : (
           <Link to="/Login" className="Link">
             <Button
-              variant="outline-info"
+            variant="outline-info"
               style={{ color: "black", fontSize: "17px", fontWeight: "bold" }}
             >
-              REGISTER / LOG IN
+              LOG IN
             </Button>
           </Link>
         )}

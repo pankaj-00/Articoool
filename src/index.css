@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
   margin: 0;
@@ -14,7 +17,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
 /* div.containerM {
   display: flex;
   flex-direction: column;
@@ -23,20 +25,30 @@ code {
 
 div.container {
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
   height: 75px;
   max-width: inherit;
   background-color: azure;
 }
 
-a.navbar-brand {
+.LogoContainer{
+  flex: 0;
+}
+/* a.navbar-brand {
   margin: auto;
   max-width: fit-content;
+  display: flex;
+  text-align: center;
   font-family: "Nanum Gothic", sans-serif;
   font-size: 30px;
-  margin-left: 120px;
+  margin-left: 70px;
+  
+} */
+.Logo{
+  
+  
 }
-
 button.loginButton:hover,
 button.loginButton:active {
   background-color: teal;

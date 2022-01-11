@@ -1,6 +1,6 @@
 import "./App.css";
 import Copyright from "./Components/copyright";
-import Navbar from "./Components/navbar";
+import Navbar from "./Components/navbar2";
 import ContactUs from "./Components/ContactUs";
 import Blogtiles from "./Components/Blogtilesedit";
 import About from "./Components/About";

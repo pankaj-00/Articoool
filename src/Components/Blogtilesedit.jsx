@@ -6,7 +6,7 @@ import "./blogtilesedit.css";
 const Blogtilesedit = () => {
   return (
     
-    <div className=" lg:columns-4 md:columns-2 grid-container ">
+    <div className=" xl:columns-4 lg:columns-3 md:columns-2 grid-container ">
       
       <div className="grid-item">
         <Link to="/post" className="Link">

@@ -32,9 +32,14 @@ div.container {
   background-color: azure;
 }
 
-.LogoContainer{
-  flex: 0;
+.NavbarElement{
+  background-color: azure !important;
 }
+
+.NavElements{
+  margin-top:30px;
+}
+
 /* a.navbar-brand {
   margin: auto;
   max-width: fit-content;
@@ -59,7 +64,8 @@ div.CopyrightContainer {
   background-color: black;
   color: white;
   text-align: center;
-
+  
+  
   width: 100%;
   height: 100px;
   display: flex;

@@ -5,22 +5,22 @@ import "./contactUs.css"
 
 export default function contactUs() {
     return (
-        <Card className='Card'>
-        <div className='contactUsFollowUs'>
-            <div className='contactUsContainer'>
+        
+        <div className='mt-10 flex-col sm:flex-row sm:border-l-2 sm:border-solid sm:border-black contactUsFollowUs'>
+            <div className='sm:ml-8 w-full sm:w-1/2 contactUsContainer'>
                 <div className='contactUs'>
                 Contact Us
                 </div>
                 <input className='Name' placeholder='&#xf007; Your Name..'  />
                 <input className='Email' placeholder='&#xf0e0; Your E-mail'/>
                 <textarea className='Message' placeholder='&#xf27a; Message'/>
-                <Button className="SendButton" variant="outline-info">
+                <Button className="!mb-5 SendButton" variant="outline-info">
                 Send Message
                 </Button>
                  
             </div>
 
-            <div className='FollowUsContainer'>
+            <div className='sm:mr-8 w-full sm:w-1/2 sm:border-l-2 sm:border-solid sm:border-black FollowUsContainer'>
                 <div className='FollowUs'>
                 Follow Us
                 </div>
@@ -48,6 +48,6 @@ export default function contactUs() {
             </div>
             
         </div>
-        </Card>
+        
     )
 }

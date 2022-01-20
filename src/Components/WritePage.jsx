@@ -1,5 +1,5 @@
-import React from "react";
-import ReactQuill from "react-quill";
+import { Editor } from "react-draft-wysiwyg";
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import "react-quill/dist/quill.snow.css";
 import "./WritePage.css";
 import { Component } from "react";
@@ -7,7 +7,7 @@ import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { db } from "../firebase";
 import { collection, addDoc, getDoc } from "firebase/firestore";
-
+import { EditorState } from "draft-js";
 import { getAuth } from "firebase/auth";
 
 class WritePage extends Component {
@@ -52,8 +52,14 @@ class WritePage extends Component {
     "link",
     "image",
   ];
-
+  
+  
+   
+  
+  
+  
   render() {
+    
     const postsRef = collection(db, "posts");
     const handlePublish = async () => {
       const { title, content, date, userId } = this.state.article;
@@ -70,7 +76,7 @@ class WritePage extends Component {
         this.setState({ error: "Failed to post article" });
       }
     };
-
+   
     return (
       <div className="Write">
         <div className="WritePage">
@@ -97,27 +103,22 @@ class WritePage extends Component {
           </label>
 
           <label className="TextBox1">
-            <ReactQuill
-              ref={(el) => {
-                this.quill = el;
-              }}
-              value={this.state.article.content}
-              onChange={(e) => {
+            <Editor 
+            
+            editorState={ (e)=>
                 this.setState({
                   article: {
                     ...this.state.article,
                     content: e,
                   },
-                });
-              }}
-              className="ReactQuill"
-              theme="snow"
-              modules={this.modules}
-              formats={this.formats}
-            ></ReactQuill>
+                })
+              }
+            toolbarClassName="flex !justify-center toolbarClassName"
+            
+            />
           </label>
 
-          <Link to="/">
+          <Link className="Link" to="/">
             <div className="PublishButtonContainer">
               <Button
                 className="PublishButton"

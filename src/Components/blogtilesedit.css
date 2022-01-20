@@ -45,6 +45,7 @@
   display:flex;
   object-fit: cover;
   border-radius: 1%;
+  margin: auto;
 }
 
 .blogTitle {

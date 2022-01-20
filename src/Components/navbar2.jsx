@@ -15,14 +15,16 @@ export default function Navbar2() {
     };
     return (
        
-        <Card className='flex mx-2 my-2 NavbarElement'>
+        <Card className='flex sticky top-0 mx-2 my-2 NavbarElement'>
 
             
-            <div className="flex items-center Container">
-            <i className="text-2xl ml-5 fas fa-bars"></i>
+            <div className=" flex items-center NavContainer">
+            <button className=' ml-5 mr-auto '>
+              <i className="cursor-pointer text-2xl mr-auto fas fa-bars"></i>
+            </button>
             <Link to="/">
-            <div className='flex m-auto items-center'> 
-              <img className="cursor-pointer static PhymiiLogo" src={logo} alt="Logo" />
+            <div className='fixed m-auto items-center'> 
+              <img className="cursor-pointer ml-40 PhymiiLogo" src={logo} alt="Logo" />
             </div> 
             </Link>
 
@@ -31,7 +33,7 @@ export default function Navbar2() {
             <img
               src={currentUser.photoURL}
               alt={currentUser.displayName}
-              className="rounded-circle w-14 mr-2 "
+              className="cursor-pointer rounded-circle w-14 mr-2 "
             />
             <Button
               className="flex mr-5 h-10 "

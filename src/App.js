@@ -1,6 +1,6 @@
 import "./App.css";
 import Copyright from "./Components/copyright";
-import Navbar from "./Components/navbar2";
+import Navbar from "./Components/navbar3";
 import ContactUs from "./Components/ContactUs";
 import Blogtiles from "./Components/Blogtilesedit";
 import About from "./Components/About";
@@ -14,7 +14,7 @@ import {
 } from "react-router-dom";
 
 import { AuthProvider } from "./contexts/AuthContext";
-import WritePage from "./Components/WritePage";
+import WritePage from "./Components/WritePage2";
 import SinglePost from './Components/SinglePost';
 
 function App() {
@@ -43,6 +43,7 @@ function App() {
         <ContactUs />
         <Copyright />
       </Router>
+      
     </AuthProvider>
   );
 }

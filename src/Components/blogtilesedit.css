@@ -16,10 +16,10 @@
 
 .grid-container{
   display: column;
-  columns:4;
   gap: 3em;
   max-width: 100rem;
   margin: 50px 50px auto;
+  
   
 }
 
@@ -45,6 +45,7 @@
   display:flex;
   object-fit: cover;
   border-radius: 1%;
+  margin: auto;
 }
 
 .blogTitle {

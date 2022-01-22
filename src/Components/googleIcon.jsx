@@ -9,7 +9,12 @@ const GoogleIcon = () => {
       height="46px"
       viewBox="0 0 46 46"
       className="google"
-      style={{ width: "48px", height: "48px", marginLeft: "-5px" }}
+      style={{
+        width: "48px",
+        height: "48px",
+        marginLeft: "-5px",
+        display: "inline-block",
+      }}
     >
       <defs>
         <filter

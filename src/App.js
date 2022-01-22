@@ -2,7 +2,7 @@ import "./App.css";
 import Copyright from "./Components/copyright";
 import Navbar from "./Components/navbar3";
 import ContactUs from "./Components/ContactUs";
-import Blogtiles from "./Components/Blogtilesedit";
+import Blogtiles from "./Components/BlockTiles2";
 import About from "./Components/About";
 import Register from "./Components/Register";
 import Login from "./Components/Login";
@@ -15,7 +15,7 @@ import {
 
 import { AuthProvider } from "./contexts/AuthContext";
 import WritePage from "./Components/WritePage2";
-import SinglePost from './Components/SinglePost';
+import SinglePost from "./Components/SinglePost";
 
 function App() {
   return (
@@ -38,12 +38,11 @@ function App() {
               </PrivateRoute>
             }
           />
-          <Route path="/Post" element={<SinglePost/>}/>
+          <Route path="/Post" element={<SinglePost />} />
         </Switch>
         <ContactUs />
         <Copyright />
       </Router>
-      
     </AuthProvider>
   );
 }

@@ -9,9 +9,9 @@ import { Link } from "react-router-dom";
 import { useAuth } from "./../contexts/AuthContext";
 
 const navigation = [
-  { name: 'Home', href: '/', current: true },
-  { name: 'Authors', href: '/Authors', current: false },
-  { name: 'About', href: '/About', current: false },
+  { name: 'Home', href: '/' },
+  { name: 'Authors', href: '/Authors'},
+  { name: 'About', href: '/About' },
 ]
 
 
@@ -25,9 +25,12 @@ function classNames(...classes) {
 export default function Example() {
 
     const { currentUser, logOut } = useAuth();
+    var currentHref = window.location.pathname;
     const handleLogout = async () => {
     await logOut();
   };
+
+  console.log(currentHref);
   return (
     <Disclosure as="nav" className="container-fluid sticky top-0 z-50 bg-sky-200">
       {({ open }) => (
@@ -62,10 +65,10 @@ export default function Example() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'no-underline bg-gray-900 text-white' : 'no-underline text-black hover:bg-gray-400 hover:text-white',
+                          (item.href==currentHref) ? 'no-underline bg-black text-white' : 'no-underline text-black hover:bg-gray-400 hover:text-white',
                           'no-underline px-3 py-2 rounded-md text-sm font-medium'
                         )}
-                        aria-current={item.current ? 'page' : undefined}
+                        aria-current={item.href==currentHref ? 'page' : undefined}
                       >
                         {item.name}
                       </a>
@@ -128,10 +131,10 @@ export default function Example() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    (item.href==currentHref) ? 'no-underline bg-black text-white' : 'no-underline text-black hover:bg-gray-400 hover:text-white',
                     'block px-3 py-2 rounded-md text-base font-medium'
                   )}
-                  aria-current={item.current ? 'page' : undefined}
+                  aria-current={(item.href==currentHref)? 'page' : undefined}
                 >
                   {item.name}
                 </Disclosure.Button>

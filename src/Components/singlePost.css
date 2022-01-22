@@ -2,7 +2,7 @@
     
     display: flex;
     margin: 60px auto;    
-    max-width: 100%;
+   
     max-height: 500px;
     object-fit: cover;
     border-radius:5px;

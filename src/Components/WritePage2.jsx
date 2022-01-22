@@ -13,15 +13,19 @@ import { convertFromRaw, convertToRaw } from "draft-js";
 import { getAuth } from "firebase/auth";
 const WritePage2 = () => {
    
-  const [editorState, setEditorSate]=useState(EditorState.createEmpty());
+  const [editorState, setEditorState]=useState(EditorState.createEmpty());
   const[article, setArticle] = useState({date:new Date(), content:"" , title:"",userID: getAuth().currentUser.displayName})  
   const[error, setError]= useState("");
   const onEditorStateChange=(editorState)=>{
-      setEditorSate(editorState);
+      setEditorState(editorState);
+      setArticle({
+                    ...article,
+                    content:convertToRaw(editorState.getCurrentContent()),
+                  },)
     };
-
-    const postsRef = collection(db, "posts");
-    const handlePublish = async () => {
+  
+  const postsRef = collection(db, "posts");
+  const handlePublish = async () => {
     const { title, content, date, userID } = article;
       if (!title || !content)
         setError( "Can't leave fields empty" );
@@ -68,7 +72,10 @@ const WritePage2 = () => {
             <Editor
             editorState={editorState}
             onEditorStateChange={onEditorStateChange}
-            toolbarClassName="flex !justify-center !bg-cyan-100"/>
+            toolbarClassName="flex !justify-center !bg-cyan-100"
+            placeholder="Write here..."
+            />
+          
           </label>
 
           <Link className="Link" to="/">

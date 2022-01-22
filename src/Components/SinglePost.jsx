@@ -6,7 +6,7 @@ const SinglePost = () => {
     let nameAuthor= "PankyJod"
     return ( 
         <div className="singlePost">
-            <img className="postImage" src="https://cdn.pixabay.com/photo/2015/02/01/21/16/chalkboard-620316_1280.jpg" alt="" />
+            <img className="w-3/4 sm:w-5/12 sm:h-full postImage" src="https://cdn.pixabay.com/photo/2015/02/01/21/16/chalkboard-620316_1280.jpg" alt="" />
             <div className="EditIcon">
                 <i className="postIcon fas fa-edit"></i>
                 <i className="postIcon fas fa-trash-alt"></i>

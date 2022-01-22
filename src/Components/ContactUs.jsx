@@ -11,9 +11,9 @@ export default function contactUs() {
                 <div className='contactUs'>
                 Contact Us
                 </div>
-                <input className='Name' placeholder='&#xf007; Your Name..'  />
-                <input className='Email' placeholder='&#xf0e0; Your E-mail'/>
-                <textarea className='Message' placeholder='&#xf27a; Message'/>
+                <input className='p-1 Name' placeholder=' &#xf007; Your Name..'  />
+                <input className='p-1 Email' placeholder=' &#xf0e0; Your E-mail'/>
+                <textarea className='p-1 Message' placeholder=' &#xf27a; Message'/>
                 <Button className="!mb-5 SendButton" variant="outline-info">
                 Send Message
                 </Button>

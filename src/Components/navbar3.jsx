@@ -30,7 +30,7 @@ export default function Example() {
     await logOut();
   };
 
-  console.log(currentHref);
+  
   return (
     <Disclosure as="nav" className="container-fluid sticky top-0 z-50 bg-sky-200">
       {({ open }) => (

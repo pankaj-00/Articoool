@@ -1,16 +1,14 @@
-import { Editor } from "react-draft-wysiwyg";
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import "./WritePage.css";
-import { Component } from "react";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { db } from "../firebase";
-import { collection, doc, addDoc, getDoc } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 import { EditorState } from "draft-js";
 import { useState } from "react";
 import React from 'react';
-import { convertFromRaw, convertToRaw } from "draft-js";
 import { getAuth } from "firebase/auth";
+
+
 const WritePage2 = () => {
    
   const [editorState, setEditorState]=useState(EditorState.createEmpty());
@@ -18,10 +16,7 @@ const WritePage2 = () => {
   const[error, setError]= useState("");
   const onEditorStateChange=(editorState)=>{
       setEditorState(editorState);
-      setArticle({
-                    ...article,
-                    content:convertToRaw(editorState.getCurrentContent()),
-                  },)
+      
     };
   
   const postsRef = collection(db, "posts");
@@ -36,6 +31,7 @@ const WritePage2 = () => {
           date: date,
           userID: userID,
         });
+        setError("Successfully posted!")
       } catch {
         setError ("Failed to post article" );
       }
@@ -69,14 +65,23 @@ const WritePage2 = () => {
           </label>
 
           <label className="TextBox1">
-            <Editor
-            editorState={editorState}
-            onEditorStateChange={onEditorStateChange}
-            toolbarClassName="flex !justify-center !bg-cyan-100"
-            placeholder="Write here..."
-            />
-          
+            <textarea 
+            className="w-full h-full outline-none" 
+            placeholder="Write here..." 
+            style={{backgroundColor:"azure"}}
+            onChange={(e) => {
+                setArticle(
+                  {
+                    ...article,
+                    content: e.currentTarget.value,
+                  },
+                
+                )}
+                }/>
           </label>
+            
+          
+          
 
           <Link className="Link" to="/">
             <div className="PublishButtonContainer">

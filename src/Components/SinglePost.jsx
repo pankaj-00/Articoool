@@ -1,13 +1,22 @@
 import "./singlePost.css";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, doc, getDoc } from "firebase/firestore";
 import React from "react";
-import { Button } from "react-bootstrap";
 import { db } from "../firebase";
-import { convertFromRaw } from "draft-js";
 
-const SinglePost = () => {
+
+const SinglePost = (props) => {
     
-    let nameAuthor= "PankyJod"
+    const docID= props.docId;
+    console.log(docID);
+    var nameAuthor= "PankyJod";
+    // const postRef = doc(db, "posts", docId);
+    // const singleDoc= async () =>{ 
+      
+    // await getDoc(postRef)
+    // .then((docs)=>{
+    //   console.log(docs.id);
+    // })
+    // }
     
 
   return (
@@ -28,21 +37,7 @@ const SinglePost = () => {
         <hr className="lineSpace" />
         <span className="blogTime">10 days ago</span>
         <p className="blogDescription">
-          bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-          bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-          bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-          bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-          bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-          bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-          bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-          bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-          bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-          bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-          bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-          bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-          bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-          bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-          bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+          
         </p>
         <hr />
         <h4 className="AuthorName">Author-{nameAuthor}</h4>

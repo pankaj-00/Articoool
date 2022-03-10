@@ -4,11 +4,12 @@ import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { db } from "../firebase";
 import "./blogtilesedit.css";
 import Moment from "./Utilities/Date.jsx";
-import SinglePost from "./SinglePost.jsx";
+
+import Categories from "./categories";
 
 const Blogtiles = () => {
   const [docs, setDocs] = useState([]);
-  
+  const [category, setCategory]= useState("")
   
   const handleData = async () => {
     const postRef=collection(db, "posts");
@@ -29,8 +30,8 @@ const Blogtiles = () => {
     handleData();
   }, []);
 
-  const handleSinglePost=(props)=>{
-    return <SinglePost docId={props.doc.id}/>
+  const handleCategory=()=>{
+    return 
   }
 
 
@@ -41,16 +42,18 @@ const Blogtiles = () => {
         }
 
 
-  return (
-    <div className={`items-center xl:columns-${minFunction} lg:columns-3 md:columns-2 grid-container `}>
+  return  (
+    <>
+    <Categories/>
+    <div className={`items-center xl:columns-${minFunction} lg:columns-3 md:columns-2 grid-container`}>
       {docs.map((doc) => {
       
       var numberOfLines=randomNumbers[Math.floor(random(1,3))-1];//number of lines to be displayed as content determined by the line height and number of lines
         
         
-        return (
+        return category ? handleCategory():( 
           <div className="grid-item" key={doc.id}>
-            <Link to="/post" className="Link" onClick="handleSinglePost(doc.id)">
+            <Link to={`/post/${doc.id}`} className="Link">
               <img
                 className="blogImg"
                 src="https://cdn.pixabay.com/photo/2015/02/01/21/16/chalkboard-620316_1280.jpg"
@@ -74,6 +77,7 @@ const Blogtiles = () => {
         );
       })}
     </div>
+    </>
   );
 };
 

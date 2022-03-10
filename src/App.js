@@ -38,7 +38,7 @@ function App() {
               </PrivateRoute>
             }
           />
-          <Route path="/Post" element={<SinglePost />} />
+          <Route path="/Post/:postId" element={<SinglePost />} />
         </Switch>
         <ContactUs />
         <Copyright />

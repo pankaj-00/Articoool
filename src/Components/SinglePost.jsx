@@ -3,21 +3,16 @@ import { collection, doc, getDoc } from "firebase/firestore";
 import React from "react";
 import { db } from "../firebase";
 
+const SinglePost = () => {
+  var nameAuthor = "PankyJod";
+  // const postRef = doc(db, "posts", docId);
+  // const singleDoc= async () =>{
 
-const SinglePost = (props) => {
-    
-    const docID= props.docId;
-    console.log(docID);
-    var nameAuthor= "PankyJod";
-    // const postRef = doc(db, "posts", docId);
-    // const singleDoc= async () =>{ 
-      
-    // await getDoc(postRef)
-    // .then((docs)=>{
-    //   console.log(docs.id);
-    // })
-    // }
-    
+  // await getDoc(postRef)
+  // .then((docs)=>{
+  //   console.log(docs.id);
+  // })
+  // }
 
   return (
     <div className="singlePost">
@@ -36,9 +31,7 @@ const SinglePost = (props) => {
 
         <hr className="lineSpace" />
         <span className="blogTime">10 days ago</span>
-        <p className="blogDescription">
-          
-        </p>
+        <p className="blogDescription"></p>
         <hr />
         <h4 className="AuthorName">Author-{nameAuthor}</h4>
 

@@ -2,7 +2,7 @@ import "./App.css";
 import Copyright from "./Components/copyright";
 import Navbar from "./Components/navbar3";
 import ContactUs from "./Components/ContactUs";
-import Blogtiles from "./Components/BlockTiles2";
+import Blogtiles from "./Components/Blocktiles/Blocktiles";
 import About from "./Components/About";
 import Register from "./Components/Register";
 import Login from "./Components/Login";

@@ -1,18 +1,27 @@
 import "./singlePost.css";
-import { collection, doc, getDoc } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 import React from "react";
+import { useParams } from "react-router-dom";
 import { db } from "../firebase";
+import { useEffect, useState } from "react";
+import Moment from "./Utilities/Date.jsx";
 
 const SinglePost = () => {
+  const [singleDocument, setSingleDoc] = useState({});
+  const router = useParams();
+  const docId = router.postId;
   var nameAuthor = "PankyJod";
-  // const postRef = doc(db, "posts", docId);
-  // const singleDoc= async () =>{
 
-  // await getDoc(postRef)
-  // .then((docs)=>{
-  //   console.log(docs.id);
-  // })
-  // }
+  const singleDoc = async () => {
+    const postRef = doc(db, "posts", docId);
+
+    const docu = await getDoc(postRef);
+    setSingleDoc(docu.data());
+  };
+
+  useEffect(() => {
+    singleDoc();
+  }, []);
 
   return (
     <div className="singlePost">
@@ -27,16 +36,18 @@ const SinglePost = () => {
       </div>
 
       <div className="blogDetails">
-        <h4 className="blogTitle">Its my life...</h4>
+        <h4 className="blogTitle">{singleDocument.title}</h4>
 
         <hr className="lineSpace" />
-        <span className="blogTime">10 days ago</span>
-        <p className="blogDescription"></p>
+        <span className="blogTime">
+          {/* <Moment date={singleDocument.date} format="lll"/> */}
+        </span>
+        <p className="blogDescription">{singleDocument.content}</p>
         <hr />
         <h4 className="AuthorName">Author-{nameAuthor}</h4>
 
         <h4>About-</h4>
-        <p>most jodd flayer in genshin and valo, jodd Web Developer</p>
+        <p></p>
       </div>
     </div>
   );

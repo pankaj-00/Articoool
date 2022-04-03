@@ -12,7 +12,7 @@ import { getAuth } from "firebase/auth";
 const WritePage2 = () => {
    
   const [editorState, setEditorState]=useState(EditorState.createEmpty());
-  const[article, setArticle] = useState({date:new Date(), content:"" , title:"",userID: getAuth().currentUser.displayName})  
+  const[article, setArticle] = useState({date:new Date(), content:"" , title:"",userID: getAuth().currentUser.displayName, Category:""})  
   const[error, setError]= useState("");
   const onEditorStateChange=(editorState)=>{
       setEditorState(editorState);
@@ -21,7 +21,7 @@ const WritePage2 = () => {
   
   const postsRef = collection(db, "posts");
   const handlePublish = async () => {
-    const { title, content, date, userID } = article;
+    const { title, content, date, userID, Category } = article;
       if (!title || !content)
         setError( "Can't leave fields empty" );
       try {
@@ -30,6 +30,7 @@ const WritePage2 = () => {
           content: content,
           date: date,
           userID: userID,
+          Category:Category,
         });
         setError("Successfully posted!")
       } catch {

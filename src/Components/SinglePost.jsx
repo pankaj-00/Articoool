@@ -40,7 +40,7 @@ const SinglePost = () => {
 
         <hr className="lineSpace" />
         <span className="blogTime">
-          {/* <Moment date={singleDocument.date} format="lll"/> */}
+          {singleDocument.date?<Moment date={singleDocument.date} format="lll"/>:null}
         </span>
         <p className="blogDescription">{singleDocument.content}</p>
         <hr />

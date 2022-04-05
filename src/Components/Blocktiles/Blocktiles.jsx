@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Blocktiles.scss";
+import ".././singlePost.css";
 import { urlFor, client } from "../../client";
 import { motion } from "framer-motion";
 
@@ -13,13 +14,12 @@ const SinglePost = ({ title, content, imgurl }) => {
       </div>
 
       <div className="blogDetails">
-        <h4 className="blogTitle">{title}</h4>
-
+        <h4 className="font-bold blogTitle">{title}</h4>
         <hr className="lineSpace" />
-
-        <h4>About-</h4>
         <p>{content}</p>
+        <hr className="lineSpace" />
       </div>
+        <h4 className="mx-5 p-2 bg-gray-700 h-[250px] rounded-md font-semibold About">About-</h4>
     </div>
   );
 };
@@ -62,7 +62,11 @@ const Blocktiles = () => {
               className="app__blogtiles-item"
               onClick={() => setSelectedTitle(item.title)}
             >
-              <img src={urlFor(item.imgUrl)} alt={item.title} />
+              <img
+                src={urlFor(item.imgUrl)}
+                alt={item.title}
+                className="object-cover"
+              />
               <h2 className="bold-text" style={{ marginTop: 10 }}>
                 {item.title}
               </h2>

@@ -19,7 +19,9 @@ const SinglePost = ({ title, content, imgurl }) => {
         <p>{content}</p>
         <hr className="lineSpace" />
       </div>
-        <h4 className="mx-5 p-2 bg-gray-700 h-[250px] rounded-md font-semibold About">About-</h4>
+      <h4 className="mx-5 p-2 bg-gray-700 h-[250px] rounded-md font-semibold About">
+        About-
+      </h4>
     </div>
   );
 };
@@ -75,7 +77,6 @@ const Blocktiles = () => {
           imgurl={urlFor(handleSinglePost().imgUrl)}
         />
       ) : (
-<<<<<<< HEAD
         <>
           <div className="app__work-filter">
             {["Sports", "Fitness", "Mental Health", "All"].map(
@@ -116,30 +117,6 @@ const Blocktiles = () => {
             ))}
           </motion.div>
         </>
-=======
-        <div className="app__blogtiles">
-          {blogtiles.map((item, index) => (
-            <motion.div
-              whileInView={{ opecity: 1 }}
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.5, type: "tween" }}
-              key={item.title + index}
-              className="app__blogtiles-item"
-              onClick={() => setSelectedTitle(item.title)}
-            >
-              <img
-                src={urlFor(item.imgUrl)}
-                alt={item.title}
-                className="object-cover"
-              />
-              <h2 className="bold-text" style={{ marginTop: 10 }}>
-                {item.title}
-              </h2>
-              <p className="p-text">{item.description}</p>
-            </motion.div>
-          ))}
-        </div>
->>>>>>> 2ea26c313ae605344dddae063b0faf6c33d53269
       )}
     </>
   );
